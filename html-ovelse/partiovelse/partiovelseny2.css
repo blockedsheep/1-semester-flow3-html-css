@@ -1,0 +1,447 @@
+/* Dette er koden til mobil formatten, som slutter hele vejen indtil @media screen and width 760px */
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --vesntre-blaa: #002782; /* Denne er en slags shortcut til de elementer som bruger "--kedelig-graa" */
+    --skrift: arial, helvetica, sans-serif;
+}
+
+/* Her betyder det at hele websitet skal bruge fontet --skrift, som er en shortcut for arial, helvetica og sans-serif */
+body {
+    margin: 0;
+    font-family: var(--skrift);
+  }
+
+
+  /* Formattet er lavet i 390x944px, mobil formattet */
+.topnav {
+    overflow: hidden;
+    background-color: var(--vesntre-blaa); /* Topnav bruger den mørkeblå farve */
+
+    display: flex;
+    justify-content: flex-end; /* Her bliver kategorierne sat heltude til højre */
+
+    max-width: 100%; /* Så den blå nav bar når helt ud til skærmen uden at give problemer */
+
+    box-shadow: 0 2px 30px 0 rgba(0,0,0,.2); /* Dette er en dropshadow for nav bar */
+
+    min-height: 60px; 
+
+}
+
+.topnav a{ /* Her styler vi bogstaverne, kun i nav baren */
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 150px;
+  }
+
+.topnav a:hover{ /* Dette gør at når musen når hen til kategorierne, "Forside, om os, hvad vil" og "kontakt" vil den give en form for hover effekt */
+    background-color: var(--vesntre-blaa);
+    color: #f5f5f5;
+  }
+
+  .topnav .icon {
+    display:block;
+    font-size: 2.9rem;
+    padding: 3px;
+    padding-right: 20px;
+    /* width: 50px; */
+}
+
+  .topnav a{
+    display: none; /* Denne fjerner link kategorierne */
+}
+
+.responsive a {
+    display: block; /* Denne fjerner link kategorierne */
+    padding: 10px;
+}
+
+.topnav a:hover{
+    background-color: #0038b9;
+}
+
+
+
+.logo img{
+    max-width: 50px;
+    max-height: 50px;
+    /* max-width og max-height er den er gør billedet mindre */
+
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    /* Position af logoet */
+}
+
+
+
+/* Den grå boks som dækker cirka 80% af den hvide baggrund */
+.containergraybox{
+    background-color: #f5f5f5;
+    margin-top: 150px;
+    padding-right: 100%;
+    padding-bottom: 700px;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+}
+
+.containertekst{ /* Dette gør så teksten på selve forsiden, får samlet teksten som en kolonne */
+    display: flex; 
+    flex-direction: column;
+}
+
+
+
+
+
+
+.jakob{ /* .jakob er en klasse, hvor den klasse  indeholder et billede af jakob, her kontrollere vi selve klassen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    margin-top: 130px;
+
+
+
+    
+}
+
+.jakob img { /* Her kontrollere vi selve billede, inde i .jakob klassen  */
+    max-width: 290px; 
+}
+
+.ommig{ /* Her kontrollere vi/styler vi titlen, undertitel og teksten */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+}
+
+
+.overskrift{
+    align-items: center;
+    /* margin-top: 260px; */
+
+    font-size: 20px;
+    /* margin-left: 50px; */
+    color: var(--vesntre-blaa);
+}
+
+.undertitel{
+    align-items: center;
+    margin-top: 5px;
+ 
+    font-size: 16px;
+    color: #6187a7;
+}
+
+.jakobbeskrivelse{
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 7px;
+    /* Men nu er spørgsmålet bare, passer Jakob's beskrivelse til formålet? */
+}
+
+.jakobbeskrivelse p{
+    width: 310px;
+}
+
+
+/* Her styler vi Jakob's socials som er LinkedIn, Twitter og Facebook */
+
+
+.kontakt{ /* Disse er links til Jakobs sociale medier profiler */ 
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    font-size: 24px;
+    color: #000000;
+    list-style: none; /* list-style: none; er den der fjerne punkterne, efter man har indsættet <li></li> elementet */
+    position: absolute;
+    margin-top: 35px;
+
+}
+
+.kontakt img{ /* Disse er billederne af twitter, linkedin, og facebook logo, her styrer vi selve billedet, her har jeg valgt at styre bredten af billedet */
+    width: 44px;
+}
+
+.kontakt a{ /* Her styler vi links til sociale medierne */
+    text-decoration: none;
+}
+
+.kontakt li{ 
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+
+
+    /* [NYT AFSNIT] Om os afsnittet, dette er i en anden HTML fil, som hedder "andenunderside */
+    .presseoverskrift{
+        font-size: 21px;
+        color: var(--vesntre-blaa);
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+
+/* [NYT AFSNIT] Dette er kontakt afsnittet, som også er i en anden HTML fil, som hedder "underparti.html */
+    .pressebeskrivelse{
+        font-size: 16px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+
+
+    .boxleft{
+        display: none;
+    }
+
+/* Eller, sociale medier skal måske lægge bagefter om Jakobs beskrivelse  */
+
+
+
+/* Nedestående er footer */
+.footer{
+    margin-top: 400px;
+    background: var(--vesntre-blaa);
+    padding: 100px;
+    max-width: 100%;
+}
+
+.footer h2{
+    color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -90px;
+    font-size: 19px;
+/* Venstre skal rykkes op men kan ikke */
+/* Fontets størrelse ændres når skærmen ændre sig */
+}
+
+.footer li{
+    list-style: none;
+    margin-left: -90px;
+    margin-top: 8px;
+}
+
+
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer a:hover{
+    color:#b2b2b2;
+} 
+
+.header2{
+    margin-top: 30px;
+}
+
+.header2 li{
+    margin-left: -90px;
+    margin-top: 8px;
+}
+
+
+
+/* Dette er koden til iPad format */
+@media screen and (min-width: 760px) { 
+    .topnav .icon {
+        display:none; /* Her fjerne vi hamburger menuen */
+    }
+
+    .topnav a{
+        display: block; /* Denne tilføjer link kategorierne */
+        padding: 15px;
+ 
+        /* font-size: */
+
+    }
+    .topnav{ /*Vi giver nav baren en flex og sætter kategorierne inde i nav baren yderst venstre side */
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.9rem; 
+        /* font-size: 1.9rem; */
+        /* text-align: center; */
+        max-width: 100%;
+    }
+
+    .logo img{ /* Billedet af venstres logo */
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .jakob{ /* Klassen til billedet af jakob, ikke selve billedet men klassen */
+        display: flex;
+        justify-content:flex-start;
+        margin-left: 40px;
+        margin-top: 130px; /* Vær opmærksom på den her magin */
+        z-index: -1;
+    }
+    .jakob img{
+        max-width: 320px;
+    }
+
+.containertekst{ /* Indeholder billedet af jakob, Jakob Ellemann Jensen overskrift, Ex-partiformand undertitel og "Vicestatsminister, økonomi og danmarks liberale parti" tekst */
+    display: flex;
+    flex-direction: row;
+}
+
+.containergraybox{ /* Den grå boks som dækkede cirka 80% af profilen */
+    background-color: #f5f5f5;
+    margin-top: 150px;
+    padding-right: 100%;
+    padding-bottom: 60%;
+    height: 200px;
+    z-index: -1;
+    position: absolute;
+}
+
+.ommig{ /* Her styler vi størrelsen på .ommig klassen, som indeholder 3 andre klasser som er .overskrift, .undertitel og .jakobbeskrivelse */
+    margin-top: 133px;
+    margin-left: 30px;
+}
+
+    .overskrift{ /*Jakob Ellemann Jensen overskrift */
+        font-size: 21px;
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+    .undertitel{ /* Dette er "Ex-partiformand" undertitel */
+        font-size: 16px;
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+    .jakobbeskrivelse{ /* Beskrivelsen under undertitlen */
+        font-size: 16px;
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+    .kontakt{ /* Jakob's socials */
+        display: flex;
+        flex-direction: column;
+        margin-left: 380px;
+        font-size: 24px;
+        color: #000000;
+        list-style: none; /* list-style: none; er den der fjerne punkterne, efter man har indsættet <li></li> elementet */
+        position: absolute;
+        margin-top: 35px;
+    
+    }
+    
+    .kontakt a{
+        text-decoration: none;
+    }
+    
+    .kontakt li{
+        margin-bottom: 36px;
+        margin-left: 18px;
+    }
+    /* Sæt logo ved siden af linkedin, twitter og facebook */
+    
+    .socials{
+        list-style: none;
+        position: absolute;
+        flex-direction: column;
+        margin-top: 24px;
+    }
+    
+    .socials img{
+        width: 44px;
+        margin-bottom: 15px;
+        margin-left: 11px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 125px;
+    }
+
+    /* Kontakt afsnittet */
+    .presseoverskrift{
+        font-size: 21px;
+        color: var(--vesntre-blaa);
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+
+
+    .pressebeskrivelse{
+        font-size: 16px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+
+        /* margin-left: 380px; */
+        z-index: -1;
+        /* flex-grow: 3; */
+    }
+
+    .nummer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 380px;
+        font-size: 24px;
+        color: #000000;
+        list-style: none; /* list-style: none; er den der fjerne punkterne, efter man har indsættet <li></li> elementet */
+        position: absolute;
+        margin-top: 35px;
+    
+    }
+    
+    .nummer a{
+        text-decoration: none;
+    }
+    
+    .nummer li{
+        margin-bottom: 36px;
+        margin-left: 18px;
+    }
+}
+
+/* Dette er koden til desktop format */
+@media screen and (min-width: 1127px) {
+    .jakob{
+        margin-left: 185px;
+    }
+    
+    .ommig{
+        margin-left: 70px;
+    }
+
+    .kontakt{
+        margin-left: 558px;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venstre2</title>
+    <link rel="stylesheet" href="partiovelseny2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Den nederste link, der hvor der står cloudflare er burgermenuen, som er hentet fra font-awesome -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/partiovelse/partiovelseny.html"><img src="venstre.jpg"alt="venstrelogo"></a>
+        </div>
+        <!-- Dette er logo'et som ses på øverst venstre side, logoet er et lille billede af venstre's parti -->
+
+        <nav class="topnav" id="myTopnav">
+            <a href="http://127.0.0.1:5500/partiovelse/partiovelseny.html">Forside</a>
+            <a href="http://127.0.0.1:5500/partiovelse/andenunderside.html">Om os</a>
+            <a href="#">Hvad vil vi?</a>
+            <a href="http://127.0.0.1:5500/partiovelse/underparti.html">Kontakt</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i> 
+
+            </a>
+
+        </nav>
+    </header>
+
+    <div class="containergraybox"></div>
+    
+    <section>
+        <div class="containertekst">
+
+            <div class="jakob">
+                <img src="jakobvenstrecircel2.png" alt="jakobnavn">
+            </div>
+
+        <!-- Dette er den mørkeblå titel hvor der står "Jakob E. Jensen, og den lyseblå undertitel, hvor der står Ex-partiformand" -->
+            <div class="ommig">
+                <div class="overskrift">
+                    <h1>Jakob Ellemann Jensen</h1>
+                </div>
+                <!-- Den mørkeblå titel -->
+
+                <div class="undertitel">
+                    <h2>Ex-partiformand</h2>
+                </div>
+                <!-- Den lyseblå undertitel -->
+
+                <div class="jakobbeskrivelse">
+                    <p>Vicestatsminister, økonomiminister og Danmarks Liberale Parti</p>    
+                </div>
+            </div>  
+        </div>
+
+
+
+
+
+        <!-- Jakob's kontakt/sociale medier -->
+        <div class="kontakt">
+            <li><a href="https://www.linkedin.com/in/ellemann/?originalSubdomain=dk" target="_blank"> <img src="linkedinlogo.png" alt=""> LinkedIn</a></li>
+            <li><a href="https://twitter.com/JakobEllemann" target="_blank" ><img src="twitterlogo.png" alt="">Twitter</a></li>
+            <li><a href="https://www.facebook.com/jakobellemann/" target="_blank" ><img src="facebooklogo.png" alt="">Facebook</a></li>
+        </div>
+    </section>
+
+
+<!-- Dette er fooderen -->
+    <footer>
+        <div class="footer">
+            <h2>VENSTRES LANDSORGANISATION</h2>
+            <li><a href="#">Søllerødvej 30, 2840 Holte</a></li>
+            <li><a href="#">venstre@venstre.dk</a></li>
+            <li><a href="#">CVR: 17491814</a></li>
+        </div>
+    </footer>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+     </script>
+
+
+</body>
+</html>
